@@ -2,7 +2,7 @@
 
 namespace DesignPattern.Observer
 {
-    public class ConcreteObserver(string userName) : IObserver
+    public class ConcreteObserver(string userName)
     {
         // Your code goes here... make sure to add this features:
         //1. Allow to hold the observer's name (e.g. when user Adam wants to observe the subject)
