@@ -25,13 +25,13 @@ namespace DesignPattern.Observer
 
         public void RegisterObserver(IObserver observer)
         {
-            //Console.WriteLine("Observer Added : " + ((ConcreteObserver)observer).UserName);
+            Console.WriteLine("Observer Added : " + ((ConcreteObserver)observer).UserName);
             observers.Add(observer);
         }
 
         public void RemoveObserver(IObserver observer)
         {
-            //Console.WriteLine("Observer Removed : " + ((ConcreteObserver)observer).UserName);
+            Console.WriteLine("Observer Removed : " + ((ConcreteObserver)observer).UserName);
             observers.Remove(observer);
         }
 

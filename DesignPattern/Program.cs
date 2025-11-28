@@ -13,7 +13,7 @@ class Program
         employeesAdapterDemo();
         Thread.Sleep(2000);
         Console.WriteLine();
-        //observingThings();
+        observingThings();
     }
 
     // No need to replace this code, it should work after implementing proper factory design pattern
@@ -44,30 +44,30 @@ class Program
     }
 
     // No need to replace this code, just implement the ConcreteObserver class for it to work properly
-    // static void observingThings()
-    // {
-    //     Subject RedMI = new("Red MI Mobile", 10000, "Out Of Stock");
-    //
-    //     ConcreteObserver user1 = new("Anurag");
-    //     user1.AddSubscriber(RedMI);
-    //
-    //     ConcreteObserver user2 = new("Pranaya");
-    //     user2.AddSubscriber(RedMI);
-    //
-    //     ConcreteObserver user3 = new("Priyanka");
-    //     user3.AddSubscriber(RedMI);
-    //
-    //     Thread.Sleep(1000);
-    //
-    //     Console.WriteLine("Red MI Mobile current state : " + RedMI.GetAvailability());
-    //     Console.WriteLine();
-    //
-    //     Thread.Sleep(1000);
-    //
-    //     user3.RemoveSubscriber(RedMI);
-    //
-    //     Thread.Sleep(1000);
-    //     RedMI.SetAvailability("Available");
-    // }
+    static void observingThings()
+    {
+        Subject RedMI = new("Red MI Mobile", 10000, "Out Of Stock");
+    
+        ConcreteObserver user1 = new("Anurag");
+        user1.AddSubscriber(RedMI);
+    
+        ConcreteObserver user2 = new("Pranaya");
+        user2.AddSubscriber(RedMI);
+    
+        ConcreteObserver user3 = new("Priyanka");
+        user3.AddSubscriber(RedMI);
+    
+        Thread.Sleep(1000);
+    
+        Console.WriteLine("Red MI Mobile current state : " + RedMI.GetAvailability());
+        Console.WriteLine();
+    
+        Thread.Sleep(1000);
+    
+        user3.RemoveSubscriber(RedMI);
+    
+        Thread.Sleep(1000);
+        RedMI.SetAvailability("Available");
+    }
 
 }
