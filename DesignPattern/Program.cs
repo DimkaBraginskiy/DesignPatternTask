@@ -10,7 +10,7 @@ class Program
         dbEngines();
         Thread.Sleep(2000);
         Console.WriteLine();
-        //employeesAdapterDemo();
+        employeesAdapterDemo();
         Thread.Sleep(2000);
         Console.WriteLine();
         //observingThings();
@@ -27,21 +27,21 @@ class Program
     }
 
     // No need to replace this code, just implement the adapter class for it to work properly
-    // static void employeesAdapterDemo()
-    // {
-    //     string[,] employeesArray = new string[5, 4]
-    //     {
-    //             {"101","John","SE","10000"},
-    //             {"102","Smith","SE","20000"},
-    //             {"103","Dev","SSE","30000"},
-    //             {"104","Pam","SE","40000"},
-    //             {"105","Sara","SSE","50000"}
-    //     };
-    //
-    //     Console.WriteLine("HR system passes employee string array to Adapter\n");
-    //     ITarget target = new EmployeeAdapter();
-    //     target.ProcessCompanySalary(employeesArray);
-    // }
+    static void employeesAdapterDemo()
+    {
+        string[,] employeesArray = new string[5, 4]
+        {
+                {"101","John","SE","10000"},
+                {"102","Smith","SE","20000"},
+                {"103","Dev","SSE","30000"},
+                {"104","Pam","SE","40000"},
+                {"105","Sara","SSE","50000"}
+        };
+    
+        Console.WriteLine("HR system passes employee string array to Adapter\n");
+        ITarget target = new EmployeeAdapter();
+        target.ProcessCompanySalary(employeesArray);
+    }
 
     // No need to replace this code, just implement the ConcreteObserver class for it to work properly
     // static void observingThings()

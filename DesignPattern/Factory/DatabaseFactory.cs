@@ -5,16 +5,18 @@
         public static IDatabase CreateDatabase(DatabaseType dbType)
         {
             IDatabase db;
-            if (dbType.Equals(DatabaseType.Oracle))
+                
+            switch (dbType)
             {
-                db = new OracleDatabase();
-            }else if (dbType.Equals(DatabaseType.SqlServer))
-            {
-                db = new SqlServerDatabase();
-            }else
-            {
-                throw new ArgumentException("Database Type: " + dbType + " is not supported.");
-            }
+                case DatabaseType.Oracle:
+                    db = new OracleDatabase();
+                    break;
+                case DatabaseType.SqlServer:
+                    db = new SqlServerDatabase();
+                    break;
+                default:
+                    throw new ArgumentException("Database Type: " + dbType + " is not supported.");    
+            } 
 
             return db;
         }
